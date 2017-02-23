@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/substyle.css" />
+		<link rel="stylesheet" href="../styles/button.css" />
+		<link rel="stylesheet" href="../styles/table.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+		<script src="../scripts/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="../scripts/instance.js" ></script>
+		<script type="text/javascript" src="../scripts/menu.js" ></script>
+		<script type="text/javascript" src="../scripts/publishRest.js" ></script>
+		<title></title>
+	</head>
+	<body onload="instanceviewload()">
+		<div class="content">
+			<img id="instance_pageview" src=" ">
+			<div class="buttons">
+				<input class="button-confirm" type="button" value="编辑实例" onclick="edit_origin()"/>
+				<input class="button-confirm" type="button" value="复制并创建新实例" onclick="linktosetinstance2()"/>
+				<input class="button-cancel" type="button" value="返回" onclick="returnPageExistinctance()"/>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,158 @@
+.button-cancel{
+	background-color: #fff;
+	color: #555;
+	font-size: 15px;
+	text-decoration: underline;
+	border: none;
+	margin-left: 40px;
+}
+.button-cancel:hover{
+	cursor: pointer;
+	color: #222;
+}
+.button-confirm{
+	height: 25px;
+	line-height: 25px;
+	width: auto;
+	font-size: 15px;
+	color: #333;
+	background-color: #F4B183;
+	border: none;
+	border-radius: 5px;
+}
+.button-confirm:hover{
+	cursor: pointer;
+	color: #000;
+}
+.button-red{
+	width: auto;
+	height: 25px;
+	margin-left: 20px;
+	line-height: 25px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	background-color: #F4B183;
+}
+.button-red:hover{
+    cursor: pointer;
+    background: red;
+}
+
+.button-list{
+	background-color: dodgerblue;
+	width: auto;
+	color: white;
+	font-size: 1.25em;
+	border: none;
+}
+
+.button-list:hover{
+	cursor: pointer;
+}
+
+.button-edit{
+	background-color: dodgerblue;
+	width: auto;
+	color: white;
+	font-size: 1.25em;
+	border: none;
+}
+
+.button-edit:hover{
+	cursor: pointer;
+}
+
+/*.button-search{
+    background-color: dodgerblue;
+    width: auto;
+    color: white;
+    font-size: 14px;
+    border: none;
+}*/
+.button-search{
+    display: block;
+    float: left;
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+	margin-top: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+	background: #fff; 
+}
+.button-search:hover{
+	background: dodgerblue;
+	color: #fff;
+}
+.button-search.addBtn{
+	margin-left: 10%;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.button-search.deleteBtn{
+	margin-top: 20px;
+	border-left: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.button-search.backBtn{
+	float: right;
+	border: none;
+	text-decoration: underline;
+	padding-bottom: 10px;
+	color: #555;
+}
+.button-search.backBtn:hover{
+	background: #fff;
+	color: #222;
+}
+/*添加页面/删除页面按钮*/
+span.button-search{
+	display: block;
+	width: 65px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 15px;
+	text-align: center;
+	background-color: #4cc3fb;
+	color: #fff;
+}
+span.button-search.add{
+}
+/*创建模板的编辑按钮*/
+div.button-search{
+    width: 45px;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 180px;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: dodgerblue;
+}
+.button-search:hover{
+    cursor: pointer;
+}
+.checkbox-all{
+}
+.operate_toolbar{
+	list-style: none;
+	padding-left: 45%;
+	padding-top:10px;
+    display: none;
+}
+.each_operate{
+	display: inline;
+}
+.edit,.check,.save,.cancel_check,.release{
+	width:50px;
+	height: 30px;
+    margin-right: 10px;
+}

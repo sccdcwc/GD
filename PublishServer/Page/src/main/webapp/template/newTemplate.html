@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title>创建模板</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../styles/newTemplate.css">
+		<link rel="stylesheet" href="../styles/font-awesome.min.css" />
+        <script type="text/javascript" src="../scripts/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="../scripts/template.js" ></script>
+		<script type="text/javascript" src="../scripts/Service.js" ></script>
+        <script type="text/javascript" src="../scripts/publishRest.js" ></script>
+	</head>
+	<body>
+		<!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+		<div class="head_bar">
+			<div id="template_info_div">
+				<div id="opration_div">
+					<button type="button" class="each_operation fa fa-plus" value="draw" id="draw"/>添加方块
+					<button type="button" class="each_operation fa fa-minus" value="delete" id="delete"/>删除方块
+				</div>
+				<ul class="operate_toolbar">
+					<li class="each_operate fa fa-edit edit" onclick="restforedit()"> 编 辑</li>
+					<li class="each_operate fa fa-save save" id="save_button" > 保 存</li>
+					<li class="each_operate fa fa-check-square-o check"> 审 核</li>
+					<li class="each_operate fa fa-close cancel_check">取消审核</li>
+					<li class="each_operate fa fa-external-link release" id="release_button"> 发 布</li>
+					<input type="text" id="templateName" name="templateName" hidden/>
+					<input type="text" id="status" name="status" hidden/>
+					<input type="text" id="scale" name="scale" hidden/>
+					<input type="text" id="temporaryData" name="temporaryData" hidden/>
+					<input type="text" id="createName" name="createName" hidden/>
+					<input type="text" id="createId" name="createId" hidden/>
+				</ul>
+				<span id="block_data"></span>
+			</div>
+		</div>
+		<div class="left_sidebar">
+			<div id="propertyBar">设置属性</div>
+			<div id="propertyFrame">
+				<table width="100%" border="0" align="center" cellpadding="4" cellspacing="4">
+					<form id="block_property_form" name="block_property_form">
+					<tr>
+						<td width="40" align="right" class="td_style"><span class="setName">名称</span></td>
+						<td><input class="input_pro" type="text" name="pro_name" id="name" value=""/></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="setEdge">边距</span></td>
+						<td><input class="input_pro" type="text" name="pro_edge" id="edge" value=""/></td>
+					</tr>
+					<tr>
+						<td class="pro_button" colspan="2">
+						<input id="save_button" type="button"  value="确定" />
+						<input id="cancel_button" type="button" value="取消"/>
+						</td>
+					</tr>
+					</form>
+				</table>
+			</div>
+		</div>
+		<div id="canvas_div">
+			<canvas id="canvas_to_grid">
+			</canvas>
+		</div>
+	</body>
+	<script type="text/javascript" src="../scripts/DrawGrid.js"></script>
+	<script>
+		window.onload=initGrid();
+	</script>
+</html>

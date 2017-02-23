@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/substyle.css" />
+		<link rel="stylesheet" href="../styles/button.css" />
+		<link rel="stylesheet" href="../styles/table.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+		<link rel="stylesheet" href="../styles/font-awesome.min.css">
+		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js" ></script>
+        <script type="text/javascript" src="../scripts/main.js"></script>
+        <script type="text/javascript" src="../scripts/menu.js"></script>
+		<script type="text/javascript" src="../scripts/template.js" ></script>
+		<script type="text/javascript" src="../scripts/publishRest.js" ></script>
+		<script type="text/javascript" src="../scripts/Service.js" ></script>
+		<title></title>
+	</head>
+	<body onload="getTemplateDetail()">
+		<div class="content">
+			<div class="content-detail">
+				<span class="content-detail-bord">模板名称：</span><span id="templateName">XXXX</span>
+				<br/>
+				<br/>
+				<span class="content-detail-bord">长&nbsp;&nbsp;宽&nbsp;&nbsp;高：</span><span id="scale">16:9</span>
+				<br/>
+				<br/>
+				<span class="content-detail-bord">创建时间：</span><span id="createtime">2016年3月8日5时0分</span>
+				<br/>
+				<br/>
+				<span class="content-detail-bord">创&nbsp;&nbsp;建&nbsp;&nbsp;者：</span><span id="creater">XXX</span>
+				<br/>
+				<br/>
+				<span class="content-detail-bord">更新日期：</span><span id="updatetime">2016年3月8日5时0分</span>
+				<br/>
+				<br/>
+				<span class="content-detail-bord">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：</span><span id="statu">已发布</span>
+				<br/>
+				<br/>
+			</div>
+			<div class="buttons">
+				<input class="button-confirm" type="button" value="编辑模板" onclick="Update()"/>
+				<input class="button-confirm" type="button" value="复制并创建新模板" onclick="window.location.href='copytemplate.html'"/>
+				<input class="button-cancel" type="button" value="返回" onclick="returnPageExist()"/>
+			</div>
+		</div>
+	</body>
+
+</html>

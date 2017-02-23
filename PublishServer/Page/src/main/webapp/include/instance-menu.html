@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+		<link rel="stylesheet" href="../styles/button.css">
+		<link rel="stylesheet" href="../styles/font-awesome.min.css">
+		<script type="text/javascript" src="../scripts/html2canvas.js"></script>
+	</head>
+
+	<body onload="instance_loadmenu()">
+		<div class="menu">
+			<ul class="menu-ul1">
+				<li style="margin-bottom: 50px;">
+					<div id="instance-menuName"> </div>
+					<ul class="instance-ul2" id="instance-ul2">
+						<!--<a><li class="active" onclick="active(this)">页面1</li></a>
+						<a><li onclick="active(this)">页面2</li></a>-->
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<p></p>
+		<p></p>
+		<div align="center">
+			<input style="visibility: hidden;" class="button-cancel" id="returnpage" type="button" value="返回" onclick="returnPage()" />
+		</div>
+		<script type="text/javascript" src="../scripts/instance.js"></script>
+		<script type="text/javascript" src="../scripts/publishRest.js"></script>
+		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="../scripts/menu.js"></script>
+		<script type="text/javascript" src="../scripts/templateDataManage.js"></script>
+		<script type="text/javascript" src="../scripts/templateRevert.js"></script>
+		<script type="text/javascript">
+			var instanceName = sessionStorage.instanceName;
+
+			function active(s) {
+				var ac = document.getElementsByClassName("active");
+				if (ac.length > 0) {
+					for (var i = 0; i < ac.length; i++) {
+						ac[i].setAttribute("class", "noactive");
+					}
+				}
+				s.setAttribute("class", "active");
+			}
+
+			function loadT(s, pageId) {
+				active(s);
+				localStorage.setItem("pageID", pageId);
+				loadTemplate(pageId);
+			}
+
+			function loadTemplate(pageId) {
+				jsonData = JSON.parse(localStorage.getItem("temporaryData"));
+				TemplateDataManageSingle.getInstance().setJsonData(jsonData);
+				html = TemplateRevert.prototype.revertPage(pageId);
+				parent.window.document.getElementById("iframe-content").contentWindow.document.getElementById("template").innerHTML = html;
+				setTimeout(function() {
+					DrawPreviewData();
+				});
+			}
+		</script>
+	</body>
+
+</html>

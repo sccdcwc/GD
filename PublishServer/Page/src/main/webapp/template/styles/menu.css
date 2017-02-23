@@ -1,0 +1,93 @@
+.menu-ul1{
+	width:200px;
+	height: auto;
+	font-size: 16px;
+}
+.menu-ul1>li{
+	font-weight: bold;
+	padding-left: 40px;
+	margin-bottom: 25px;
+    background: url(../imgs/blue-san.png) 20px 4px no-repeat;
+    background-size: 12px;
+}
+.menu-ul2{
+	/*width:200px;*/
+	height: auto;
+	font-size: 15px;
+}
+.menu-ul2>li{
+	height: 1.5em;
+	line-height: 1.5em;
+	padding-left: 18px;
+	font-size: 16px;
+	font-weight: normal;
+	background: url(../imgs/blue-cir.png) 0 center no-repeat ;	
+    background-size: 10px;
+	letter-spacing: 1px;
+}
+.menu-ul2 li:hover{
+	background:#3399FF;
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+}
+/*新模板的菜单栏*/
+.model-menu-ul2{
+	/*width:200px;*/
+	height: auto;
+	font-size: 15px;
+}
+.model-menu-ul2 li{
+	height: 1.5em;
+	line-height: 1.5em;
+	padding-left: 18px;
+	font-size: 18px;
+	font-weight: normal;
+	background: url(../imgs/blue-cir.png) 0 center no-repeat ;	
+    background-size: 10px;
+	letter-spacing: 1px;	
+}
+.model-menu-ul2 li:hover{
+	background:#3399FF;
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+}
+.model-menu-ul2 a{
+	height: auto;
+	text-decoration: none;
+	color: black;
+}
+.model-menu-ul2 li.active{
+	background:#3399FF;
+	color: white;
+	border-radius: 10px;
+}
+
+.instance-ul2 li{
+	height: 1.5em;
+	line-height: 1.5em;
+	padding-left: 18px;
+	font-size: 18px;
+	font-weight: normal;
+	background: url(../imgs/blue-cir.png) 0 center no-repeat ;	
+    background-size: 10px;
+	letter-spacing: 1px;	
+}
+.instance-ul2 li:hover{
+	background:#3399FF;
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+}
+.instance-ul2 a{
+	height: auto;
+	text-decoration: none;
+	color: black;
+}
+.instance-ul2 li.active{
+	background:#3399FF;
+	color: white;
+	border-radius: 10px;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/substyle.css" />
+		<link rel="stylesheet" href="../styles/button.css" />
+		<link rel="stylesheet" href="../styles/table.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+		<link rel="stylesheet" href="../styles/page.css" />
+		<link rel="stylesheet" href="../styles/font-awesome.min.css" />
+		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="../scripts/publishRest.js"></script>
+		<script type="text/javascript" src="../scripts/instance.js"></script>
+	</head>
+
+	<body onload="getinstance_replica(2)">
+		<div class="content" style="height: auto;">
+			<div class="condition">
+				<div class="c-title1">
+					<p>查询条件</p>
+				</div>
+				<div class="condition-table">
+					<div class="dy-search">
+						<input type="text" id="instanceName" class="instanceName" placeholder="请输入实例名称...">
+						<span class="btn-search fa fa-search" onclick="getinstance_replica(2)">搜索</span>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="c-title2">
+					<p>查询结果--模板实例</p>
+				</div>
+				<div class="model-table">
+					<table class="bordered" id="instancelist">
+						<thead>
+							<tr>
+								<th></th>
+								<th>NO.</th>
+								<th>模板实例名称</th>
+								<th>长宽比</th>
+								<th>创建者名称</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- 添加分页按钮组合 -->
+					<div class="PageBtn">
+						<div class="firstBtn">首页</div>
+						<div class="Btn preBtn">
+							<</div>
+								<div class="PageNumBox">
+								</div>
+								<div class="Btn nextBtn">></div>
+								<div class="lastBtn">尾页</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</body>
+
+</html>

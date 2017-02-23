@@ -1,0 +1,32 @@
+ *{
+ 	margin:0 atuo;
+ 	padding:0px;
+ 	background-color: blanchedalmond;
+ }
+.property_div{
+	 
+	margin: 0 auto;
+	 
+}
+table{
+	width:100%;
+	 border:0;
+	 height:100%;
+	 
+}
+ 
+.input_pro{
+	width:100px;
+	margin-left:2px;
+	line-height:20px;
+	background-color: #C7EDCC;
+	border: 1px solid #849D87;
+}
+.td_head{font-size: 5px;}
+.pro_button{
+	padding-top:10px; 
+	padding-left:20px;
+}
+#cancel_button{
+	margin-left: 30px;
+}

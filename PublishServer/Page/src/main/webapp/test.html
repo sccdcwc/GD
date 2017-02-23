@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script  language="JavaScript">
+        function to(){
+            rest("http://211.83.111.206:7070/publish/station/rest/template/criteria/createrName=4;status=0",GET_METHOD,null,null,callback,null,'成都');
+        }
+        function callback(data){
+            alert(data.data.templateMatchList);
+        }
+        </script>
+</head>
+<body>
+<div>
+    <input type="button" id="buttonedit"  value="编辑" onclick="getFile()" />
+</div>
+</body>
+<script type="text/javascript" src="scripts/test.js"></script>
+<script type="text/javascript" src="scripts/publishRest.js"></script>
+<script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script>
+</html>

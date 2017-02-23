@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/substyle.css" />
+		<link rel="stylesheet" href="../styles/button.css" />
+		<link rel="stylesheet" href="../styles/table.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+        <script type="text/javascript" src="../scripts/jquery-2.2.3.min.js" ></script>
+        <script type="text/javascript" src="../scripts/main.js"></script>
+        <script type="text/javascript" src="../scripts/menu.js"></script>
+        <script type="text/javascript" src="../scripts/publishRest.js"></script>
+        <script type="text/javascript" src="../scripts/instance.js"></script>
+    </head>
+	<body onload="getInstanceDetail()">
+		<div class="content">
+            <div class="head_bar">
+				<div id="instance_info_div">
+					<ul class="operate_toolbar">
+						<li class="each_operate">
+							<a href="#"><img class="edit" src="../imgs/edit.png" onclick="restforedit()"/></a>
+						</li>
+						<li class="each_operate">
+							<a href="#"><img class="save" id="save_button" src="../imgs/save.png" onclick="restforsave()"/></a>
+						</li>
+						<li class="each_operate">
+							<a href="#"><img class="check" src="../imgs/check.png" /></a>
+						</li>
+						<li class="each_operate">
+							<a href="#"><img class="cancel_check" src="../imgs/cancel_check.png" /></a>
+						</li>
+						<li class="each_operate">
+							<a href="#"><img class="release"  id="release_button" src="../imgs/release.png" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content-detail">
+				<span>模板实例名称：</span><span id="instanceName">XXXX</span>
+				<br/>
+				<br/>
+                <span>创建者：</span><span id="creater">XXX</span>
+				<br/>
+				<br/>
+				<span>长宽高：</span><span id="scale">16:9</span>
+				<br/>
+				<br/>
+				<span>创建时间：</span><span id="create-time">2016年3月8日5时0分</span>
+				<br/>
+				<br/>
+                <span>发布时间：</span><span id="publish-time">2016年3月8日5时0分</span>
+				<br/>
+				<br/>
+				<span>更新日期：</span><span id="update-time">2016年3月8日5时0分</span>
+				<br/>
+				<br/>
+				<span>状态：</span><span id="statu">已发布</span>
+				<br/>
+				<br/>
+			</div>
+			<div class="buttons" id="buttons">
+				<input class="button-cancel" type="button" value="取消" onclick="returnpage()" />
+				<input class="button-confirm" type="button" value="确定并创建模板实例" onclick="linktodetail_original()"/>
+			</div>
+		</div>
+	</body>
+</html>

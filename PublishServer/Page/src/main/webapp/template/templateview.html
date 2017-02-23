@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/substyle.css" />
+		<link rel="stylesheet" href="../styles/button.css" />
+		<link rel="stylesheet" href="../styles/table.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js" ></script>
+		<script type="text/javascript" src="../scripts/menu.js" ></script>
+		<script type="text/javascript" src="../scripts/template.js" ></script>
+	</head>
+	<body onload="templateviewload()">
+		<div class="content">
+			<p>
+				<img id="pageview" src="">
+			</p>
+			<div class="buttons">
+				<input class="button-confirm" type="button" value="编辑模板" onclick="Update()"/>
+				<input class="button-confirm" type="button" value="复制并创建新模板" onclick="window.location.href='copytemplate.html'"/>
+				<input class="button-cancel" type="button" value="返回" onclick="returnPageExist()"/>
+			</div>
+		</div>
+	</body>
+</html>

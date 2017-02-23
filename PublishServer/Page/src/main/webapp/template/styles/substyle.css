@@ -1,0 +1,196 @@
+.button1{
+    width: 160px;
+    padding: 0 20px;
+    height: 100px;
+    background-color: #1E90FF;
+    float: left;
+    margin-left: 10%;
+    margin-top: 20%;
+	border-radius: 3px;
+}
+
+#cancel1{
+	visibility: hidden;
+}
+.botton2{
+	width: 20%;
+	height: 19%;
+	background-color: #1E90FF;
+	float: right;
+	margin-right: 10%;
+	margin-top: 20%;
+}
+
+.button1 p{
+	color: white;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.botton2 p{
+	color: white;
+	font-size: 1.25em;
+	text-align: center;
+	padding: 0;
+	margin:10% 0;
+}
+
+.condition{
+    width: 100%;
+    margin:20px auto;
+}
+
+.c-title1{
+	width: 90%;
+	margin:2% 0;
+	background-color: #1E90FF;
+	border-radius: 5px;
+}
+.c-title1 p{
+    padding: 3px 0 3px 24px;
+    margin: 0px;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    background: url(../imgs/cir-wt.png) 7px center no-repeat;
+    background-size: 10px;
+}
+.condition-table{
+	width: 90%;
+	margin: 0;
+}
+.condition-table table{
+	margin: 0 auto;
+}
+
+.condition-table table input{
+	width: 50%;
+}
+.condition-table table td{
+	padding: 2% 1%;
+}
+
+.condition-table .dy-search{
+	padding: 20px;
+}
+.condition-table .dy-search input{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 10px;
+	font-size: 14px;
+	border:none;
+	border-bottom: 1px solid #aaa;
+}
+.condition-table .dy-search span{
+	display: inline-block;
+	padding: 7px;
+	font-size: 14px;
+	border-radius: 3px;
+	border:1px solid #1E90FF;
+	color: #1E90FF;
+}
+.condition-table .dy-search span:before{
+	padding-right: 5px;
+}
+.condition-table .dy-search span:hover{
+	color: #fff;
+	background: #1E90FF;
+}
+.c-title2{
+	width: 90%;
+	margin:2% 0;
+	background-color: #1E90FF;
+	border-radius: 5px;
+}
+.c-title2 p{
+	padding: 3px 0 3px 24px;
+    margin: 0px;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    background: url(../imgs/cir-wt.png) 7px center no-repeat;
+    background-size: 10px;
+}
+.content-detail{
+	width: 50%;
+	margin: 20px auto;
+}
+.content-detail span{
+	font-size: 15px;
+	color: dimgrey;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.buttons{
+	width: 50%;
+	margin: 0 auto;
+	}
+.button-cancel{
+	margin-right:20%;
+}
+
+.content-view{
+	width: 90%;
+	margin: 2% auto 5%;
+	height: 60%;
+	background: gainsboro;
+}
+
+.buttonmenu{
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.setwh{
+	width: 500px;
+	margin: 100px auto;
+	font-size: 16px;
+	/*letter-spacing: 1px;*/
+}
+.setwh.setwhPer{
+	width: 50%;
+}
+.setwh span{
+	font-weight: bold;
+	font-size: 16px;
+    font-family: "Times New Roman";
+}
+.setwh span.pdl18{
+	padding-left: 18px;
+}
+.setwh span.pdl36{
+	padding-left: 36px;
+}
+.setwh input {
+	height: 25px;
+	line-height: 25px;
+	font-size: 15px;
+	width: 30%;
+	margin-bottom: 5%;
+	border: none;
+	border-bottom: 1px solid #aaa;
+}
+.tWh{
+	width: 30%;
+	height: 25px;
+	font-size: 15px;
+	border: none;
+	border-bottom: 1px solid #aaa;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 14px;
+    background: url(../imgs/blue-san.png) no-repeat scroll right center transparent;
+    background-size: 10px;
+}
+select::-ms-expand { display: none; }
+.tWh option{
+    height: 50px;
+    line-height: 53px;
+    font-size: 15px;
+    border: none;
+}
+
+select::-ms-expand { display: none; }

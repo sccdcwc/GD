@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+		<link rel="stylesheet" href="../styles/button.css" />
+		<link rel="stylesheet" href="../styles/font-awesome.min.css">
+		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="../scripts/Service.js"></script>
+        <script type="text/javascript" src="../scripts/template.js"></script>
+        <script type="text/javascript" src="../scripts/menu.js"></script>
+	</head>
+        <body onload="loadmenu()">
+        <div class="menu">
+			<ul class="menu-ul1" >
+				<li  style="margin-bottom: 50px;" >
+					<div id="model-menuName"> </div>
+                    <!--作者：Sush 时间：2016-06-18 描述：model-menuName用于js给模板名称赋值-->
+					<ul class="model-menu-ul2" id="model-menu-ul2">
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div>
+		<p></p>
+		</div>
+		<div align="center">
+			<input class="button-search addBtn" id="add" type="button" value="添加页面" onclick="addPage()" />
+			<input class="button-search deleteBtn" id="delete" type="button" value="删除页面" onclick="deletePage()" />
+		</div>
+        <p></p>
+        <p></p>
+        <div align="center">
+           <input class="button-search backBtn" id="returnpage" type="button" value="返回" onclick="returnPage()"/>
+        </div>
+	</body>
+</html>

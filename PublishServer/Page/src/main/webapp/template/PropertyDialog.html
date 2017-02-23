@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="styles/PropertyDialog.css">
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div id="property_div">
+      <table width="100%" border="0" align="center" cellpadding="4" cellspacing="4">
+        <form id="block_property_form" name="block_property_form">
+        <tr>
+          <td><span class="td_head">名称</span></td>
+          <td><input class="input_pro" type="text" name="pro_name" id="name" value=""/></td>
+      </tr>
+        <!--tr>
+          <td width="150" align="right">类型</td>
+          <td><input class="input_pro" type="text" name="pro_type" id="title" /></td>
+        </tr-->
+        <tr>
+          <td><span class="td_head">边距</span></td>
+          <td><input class="input_pro" type="text" name="pro_edge" id="edge" value=""/></td>
+        </tr>
+        <tr>
+          <td class="pro_button" colspan="2">
+          <input id="save_button" type="button"  value="确定" onsubmit="return checkPropertySubmit()"/> 
+          <input id="cancel_button" type="button" value="取消"/>
+          </td>
+        </tr>
+        </form>
+      </table>
+</div>
+</body>
+<script type="text/javascript" src="scripts/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="scripts/PropertyDialog.js"></script>
+<script type="text/javascript" src="scripts/zDialog.js"></script>
+<script type="text/javascript" src="scripts/zDrag.js"></script>
+</html>

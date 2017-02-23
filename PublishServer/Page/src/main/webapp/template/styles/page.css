@@ -1,0 +1,39 @@
+	.PageBtn{
+		width: 90%;
+		margin-top: 10px;
+		text-align: center;
+	}
+	.PageBtn div{
+		display: inline-block;
+		margin: 0 5px;
+	}
+	.firstBtn,.lastBtn{
+		padding: 3px;
+		border:1px solid #1E90FF;
+		color: #1E90FF;
+		font-size: 15px;
+		border-radius: 3px;
+	}
+	.Btn{
+		width: 18px;
+		height: 18px;
+		padding: 3px;
+		font-size: 15px;
+		text-align: center;
+		border-radius: 50%;
+		border:1px solid #1E90FF;
+		color: #1E90FF;
+	}
+	.Btn:hover,.firstBtn:hover,.lastBtn:hover{
+		background: #1E90FF;
+		color: #fff;
+	}
+	.active{
+		background: #1E90FF;
+		color: #fff;
+	}
+	.noActive{
+		background: #ccc;
+		border: 1px solid #555;
+		color: #000
+	}

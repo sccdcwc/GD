@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="../styles/style.css" />
+<meta charset="utf-8" />
+<div class="top">
+	<div class="title">
+		<div class="title-img">
+			<img src="../imgs/scn-logo.jpg" alt="">
+		</div>
+		<div class="title-p">
+			<p><span class="line"></span>页面自定义工具</p>
+		</div>
+		<div class="title-login">
+			<div class="username" id="username">用户名</div>
+			<div class="help">&nbsp;&nbsp;/&nbsp;&nbsp;帮助</div>
+		</div>
+	</div>
+</div>
+<script>
+	var username = getparameter("username")
+	console.log(username);
+	if(username == null){
+		username = "张三";
+	}
+	document.getElementById("username").innerHTML = username;
+	function getparameter(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null)
+			return unescape(r[2]);
+		return null;
+	}
+</script>

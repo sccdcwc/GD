@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/menu.css" />
+		<link rel="stylesheet" href="../styles/toolbar.css" />
+		<script type="text/javascript" src="../scripts/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="../scripts/menu.js"></script>
+		<script type="text/javascript" src="../scripts/templateDataManage.js"></script>
+		<script type="text/javascript" src="../scripts/templateRevert.js"></script>
+		<script type="text/javascript" src="../scripts/addToolbar.js"></script>
+		<script type="text/javascript" src="../scripts/html2canvas.js"></script>
+		<script type="text/javascript" src="../scripts/instance.js"></script>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div style="width:1420px;height:610px;">
+			<!--<div class="menu">
+			<ul class="menu-ul1">
+				<li style="margin-bottom: 50px;" id="menuName">XXX模板
+					<ul class="menu-ul2" id="menu-ul2">
+					</ul>
+				</li>
+			</ul>
+		</div>-->
+			<div style="margin:10px 0px 0px 10px">
+				<div id="toolbar">
+					<div id="tool_content">
+						<img class="img_style" src="../imgs/interface.png" title="背景接口控件" onclick="backgroundEditor(TemplateDataManageSingle.getInstance().getPage(document.getElementById('hidden_pageId').value));" />
+						<img class="img_style" src="../imgs/text.png" title="文字控件" onclick="textEditor('');" />
+						<img class="img_style" src="../imgs/insertImg.png" title="图片控件" onclick="imageEditor('');" />
+						<img class="img_style" src="../imgs/table.png" title="列表控件" onclick="tableEditor('');" />
+						<img class="img_style" src="../imgs/clear_content.png" title="清空控件" onclick="clearBlockContent();" />
+					</div>
+				</div>
+				<div id="template" style="float:left;"></div>
+				<div id="editor" style="display:none"></div>
+				<div id="resultDiv"></div>
+
+			</div>
+		</div>
+		<div>
+			<!--  <button class="button_style" style="margin-left:400px;" onclick="editorTemplate();">编辑</button>-->
+			<button class="button_style" onclick="saveTemplate();">保存</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var status = 0;
+		window.onload = function() {
+			setTimeout(saveimg, 2000);
+		}
+
+		function convertImgToBase64(url, callback, outputFormat) {
+			try{
+			var canvas = document.createElement('CANVAS');
+			var ctx = canvas.getContext('2d');
+			var img = new Image();
+			img.crossOrigin = 'Anonymous';
+			img.onload = function() {
+				canvas.height = img.height;
+				canvas.width = img.width;
+				ctx.drawImage(img, 0, 0);
+				var dataURL = canvas.toDataURL(outputFormat || 'image/png');
+				callback.call(this, dataURL);
+				// Clean up 
+				canvas = null;
+			};
+			img.src = url;
+			}
+			catch(ex){
+				console.log(ex.message);
+			}
+		}
+
+		function saveimg() {
+			var imgs = new Array();
+			var jsonData = JSON.parse(localStorage.getItem("temporaryData"));
+			var previewData = sessionStorage.templatePreview.split(",");
+			for (var i = 0; i < jsonData.pages.length; i++) {
+				imgs[i]=encodeURI(previewData[i]);
+				localStorage.setItem("data_img" + i, "a");
+				convertImgToBase64(imgs[i], function(base64Img) {
+					var i = 0;
+					while (1) {
+						if (localStorage.getItem("data_img" + jsonData.pages[i].page_id) == "a") {
+							var imgdata=jsonData.pages[i].page_id+","+jsonData.pages[i].page_name;
+							localStorage.setItem("data_img" + jsonData.pages[i].page_id, encodeURIComponent(imgdata + "," + base64Img));
+							break;
+						} else {
+							i++;
+						}
+					}
+				});
+			}
+		}
+
+		function saveTemplate() {
+			//获取实例信息
+			jsonData = JSON.parse(localStorage.getItem("temporaryData"));
+			var instanceName = localStorage.getItem("instanceName");
+			//合并previewdata信息
+			var putdata = "instanceName=" + encodeURIComponent(instanceName) + "&" + "status=" + status + "&" + "temporaryData=" + JSON.stringify(jsonData);
+			for (var i = 0; i < jsonData.pages.length; i++) {
+
+				var jsontemplatepages = jsonData.pages;
+				var kk = jsontemplatepages[i];
+				var dataimgid = "data_img" + kk.page_id;
+				var data_img = localStorage.getItem(dataimgid);
+				putdata = putdata + "&previewData=" + data_img;
+			}
+			var instanceId = localStorage.getItem("instanceID");
+			$.ajax({
+				type: 'PUT',
+				url: 'http://211.83.111.206:7070/publish/station/rest/instance/' + instanceId,
+				data: putdata,
+				success: function(data) {
+					alert(data.content);
+				},
+				error: function(data) {
+					alert(data.content);
+				}
+			});
+		}
+
+		//		$('form#colorPicker').bind('submit', function() {
+		//			alert($(this).serialize());
+		//			return false;
+		//		});
+		//		$('#color').bind('change', function() {
+		//
+		//			$('p').css('background-color', $(this).val());
+		//		});
+
+//		$('form#colorPicker').bind('submit', function() {
+//			alert($(this).serialize());
+//			return false;
+//		});
+
+//		$('#color').bind('change', function() {
+//
+//			$('p').css('background-color', $(this).val());
+//		});
+	</script>
+
+</html>
